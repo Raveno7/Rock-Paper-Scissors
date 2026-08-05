@@ -1,3 +1,4 @@
+// Declaration
 const buttons = document.querySelectorAll(".choice-btn");
 const humanScoreE1 = document.querySelector(".human-score");
 const computerScoreE1 = document.querySelector(".computer-score");
@@ -6,6 +7,8 @@ const finalResult = document.querySelector("#final-result");
 const rst = document.querySelector("#reset")
 let humanScore = 0;
 let computerScore = 0;
+
+// Button Assignment
 buttons.forEach(btn => {
     btn.addEventListener('click', (event) => {
         event.preventDefault();
@@ -42,6 +45,7 @@ rst.addEventListener('click', (event) => {
 });
 
 
+// Computer Logic
 function getComputerChoice(){
     const computer = Math.floor(Math.random() * 3) + 1;
 
@@ -55,7 +59,7 @@ function getComputerChoice(){
 };
 
 
-
+// Checking for valid human answer
 function getHumanChoice(){
     const validChoices = ["rock", "paper", "scissors"];
     const choice = prompt("What is your choice? (rock, paper, scissors)").toLowerCase();
@@ -67,7 +71,7 @@ function getHumanChoice(){
 }
 
 
-
+// Game logic
 function playRound(humanChoice, computerChoice){
     if (humanChoice === computerChoice){
         return "It's a draw";
