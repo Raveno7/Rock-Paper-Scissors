@@ -59,16 +59,6 @@ function getComputerChoice(){
 };
 
 
-// Checking for valid human answer
-function getHumanChoice(){
-    const validChoices = ["rock", "paper", "scissors"];
-    const choice = prompt("What is your choice? (rock, paper, scissors)").toLowerCase();
-    if (!validChoices.includes(choice)){
-        console.log("Invalid choice! Please enter rock, paper or scissors.");
-        return getHumanChoice();
-    }
-    return choice;
-}
 
 
 // Game logic
@@ -84,22 +74,4 @@ function playRound(humanChoice, computerChoice){
         return `You Lose! ${computerChoice} beats ${humanChoice}`;
         
     }
-}
-
-
-
-
-
-// function playGame(){
-//     for(let i = 1; i <= 5; i++){
-//     const humanChoice = getHumanChoice();
-//     const computerChoice = getComputerChoice();
-//     console.log("Human chose:", humanChoice);   
-//     console.log("Computer chose:", computerChoice);
-//     const result = playRound(humanChoice, computerChoice);
-//     console.log(result);
-//     console.log(`Your score: ${humanScore}, Computer's score: ${computerScore}`);
-//     }
-// }
-
-playGame()
+};
